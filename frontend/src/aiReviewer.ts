@@ -22,7 +22,7 @@ export interface ReviewResult {
  */
 export async function reviewResume(data: ResumeData): Promise<ReviewResult> {
   try {
-    const response = await fetch('http://localhost:3001/api/ai-review', {
+    const response = await fetch('/api/ai-review', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
