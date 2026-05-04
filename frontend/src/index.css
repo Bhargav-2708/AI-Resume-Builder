@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #F8FAFC;
+  --color-foreground: #0F172A;
+  --color-primary: #4F46E5;
+  --color-card: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.shadow-elegant {
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #4F46E5 0%, #0891b2 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #4F46E5 0%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

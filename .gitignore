@@ -1,0 +1,9 @@
+node_modules/
+.env
+dist/
+.DS_Store
+*.log
+backend/resumes.json
+backend/users.json
+frontend/dist/
+frontend/node_modules/
