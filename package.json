@@ -2,8 +2,10 @@
   "name": "ai-resume-builder-root",
   "version": "1.0.0",
   "scripts": {
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && npm install && npx ts-node server.ts"
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npx tsc",
+    "start": "node backend/dist/server.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
   }
 }

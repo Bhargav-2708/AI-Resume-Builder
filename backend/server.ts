@@ -182,7 +182,10 @@ Provide 3-8 issues. Be specific, constructive, and actionable.`;
 });
 
 // Serve static files from the frontend build
-const frontendPath = path.join(__dirname, '../frontend/dist');
+// process.cwd() works correctly for both ts-node (dev) and compiled JS (production)
+const frontendPath = process.env.NODE_ENV === 'production'
+  ? path.join(process.cwd(), 'frontend/dist')
+  : path.join(__dirname, '../frontend/dist');
 if (fs.existsSync(frontendPath)) {
   app.use(express.static(frontendPath));
   app.get('*', (req, res) => {
