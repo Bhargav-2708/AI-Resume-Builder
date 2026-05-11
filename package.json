@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "install-all": "cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npx tsc",
+    "build": "cd frontend && npm install --include=dev && npm run build && cd ../backend && npm install --include=dev && npx tsc",
     "start": "node backend/dist/server.js",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev"
