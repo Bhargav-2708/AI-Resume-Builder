@@ -24,6 +24,11 @@ if (!fs.existsSync(usersFile)) {
   fs.writeFileSync(usersFile, JSON.stringify([]));
 }
 
+// Health check route
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'Backend is running', time: new Date().toISOString() });
+});
+
 // Auth Routes
 app.post('/api/register', (req, res) => {
   try {
