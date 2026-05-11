@@ -7,6 +7,6 @@ services:
     startCommand: npm start
     envVars:
       - key: GEMINI_API_KEY
-        sync: false
+        value: AIzaSyDy03o_kpsFNs5Aa3D9W-NsQ_-zISeEpik
       - key: NODE_ENV
         value: production
