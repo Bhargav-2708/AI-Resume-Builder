@@ -193,9 +193,8 @@ const frontendPath = process.env.NODE_ENV === 'production'
   : path.join(__dirname, '../frontend/dist');
 if (fs.existsSync(frontendPath)) {
   app.use(express.static(frontendPath));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-  });
+// Wildcard route removed to prevent Express 5 crash. 
+// Frontend is served by Vite on port 5173 locally.
 }
 
 const PORT = process.env.PORT || 3001;
